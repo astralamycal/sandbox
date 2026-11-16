@@ -8,6 +8,10 @@
 
 ## 2025
 
+### SOKOBAN
+
+A game of Sokoban.
+
 ### Tic-Tac-Toe
 
 Script that runs a tic-tac-toe game against the computer.
