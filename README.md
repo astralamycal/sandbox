@@ -8,6 +8,10 @@
 
 ## 2025
 
+### Tic-Tac-Toe
+
+Script that runs a tic-tac-toe game against the computer.
+
 ### Magic Number
 
 **This projects generates a random number to guess between 1 and 100.**
