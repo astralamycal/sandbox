@@ -8,6 +8,10 @@
 
 ## 2025
 
+### Average dev journey
+
+A small choose your own adventure website.
+
 ### Café Orléans
 
 Html page aimed at replicating a Figma.
