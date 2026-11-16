@@ -8,6 +8,11 @@
 
 ## 2025
 
+### Magic Number
+
+**This projects generates a random number to guess between 1 and 100.**
+You have to type the number in the terminal. The computer will tell you whether the guess is too high or low until you find the right number.
+
 ### Calculatrice_C
 
 Petit script en C d'une calculatrice capable de faire des opérations simples avec quelques gestions d'erreurs.
