@@ -1,0 +1,47 @@
+Afficher la liste des utilisateurs ayant passé une commande
+
+SELECT * FROM utilisateur
+JOIN commande on utilisateur.id = commande.id_utilisateur;
+
+Afficher la liste des utilisateurs ayant passé une commande (sans les doublons)
+
+SELECT DISTINCT nom, prenom FROM utilisateur
+JOIN commande on utilisateur.id = commande.id_utilisateur;
+
+Afficher le nombre d’utilisateurs ayant passé une commande
+
+SELECT COUNT(DISTINCT nom, prenom) FROM utilisateur
+JOIN commande on utilisateur.id = commande.id_utilisateur;
+
+Afficher le nombre de commande réalisées par utilisateur
+
+SELECT DISTINCT nom, prenom, COUNT(*) FROM utilisateur
+JOIN commande on utilisateur.id = commande.id_utilisateur
+GROUP BY nom, prenom;
+
+Afficher la liste des utilisateurs n’ayant jamais commandé
+
+SELECT * FROM utilisateur
+LEFT JOIN commande on utilisateur.id = commande.id_utilisateur
+WHERE commande.id_utilisateur is NULL;
+
+Afficher la liste des utilisateurs ayant passé une commande aujourd’hui
+
+SELECT nom, prenom FROM utilisateur
+LEFT JOIN commande on utilisateur.id = commande.id_utilisateur
+WHERE date_commande = CURRENT_DATE;
+
+Afficher la liste des produits n’ayant jamais été commandés
+
+SELECT * FROM produit
+LEFT JOIN contenuCommande on produit.id = contenuCommande.id_produit
+WHERE id_commande is NULL;
+
+Afficher le contenu de la commande de l’utilisateur dont le nom est ‘Bezos’.
+Vous ne connaissez pas à l’avance son id.
+
+SELECT produit.nom, contenuCommande.qte FROM produit
+JOIN contenuCommande on produit.id = contenuCommande.id_produit
+JOIN commande on contenuCommande.id_produit = commande.id
+JOIN utilisateur on commande.id_utilisateur = utilisateur.id
+WHERE utilisateur.nom = "Bezos";

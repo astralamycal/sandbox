@@ -1,0 +1,30 @@
+{% extends "layout.html.twig" %}
+
+{% block main %}
+    <main id="blog">
+        <ul>
+            {% for id, article in articles %}
+                <li>
+                    <article>
+                        <header>
+                            <h2>
+                                {{ article.titre }}
+                                Titre de l'article 1
+                            </h2>
+                        </header>
+
+                        <section>
+                            <p>
+                                {{ article.resume }}
+                                Résumé de l'article 1
+                            </p>
+                        </section>
+                        <footer>
+                            <a href="index.php/{{ id }}">Lire l'article complet</a>
+                        </footer>
+                    </article>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock %}

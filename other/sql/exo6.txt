@@ -1,0 +1,90 @@
+Créer une nouvelle base de données intitulée “révisions”
+
+CREATE DATABASE révision;
+
+Créer une table “restaurants” contenant les champs suivants :
+Id,
+Nom,
+Type_cuisine,
+Localisation,
+Prix_moyen.
+
+CREATE TABLE restaurants(
+    Id int AUTO_INCREMENT PRIMARY KEY,
+    Nom varchar(100),
+    Type_cuisine varchar(100),
+    Localisation varchar(100),
+    Prix_moyen int);
+
+Insérez 6 restaurants différents dont :
+2 à Paris,
+2 à Bordeaux,
+2 à Lyon.
+
+INSERT INTO restaurants (Id, Nom, Type_cuisine, Localisation, Prix_moyen) VALUES
+(1, 'Le Jardin d’Été', 'Française gastronomique', 'Paris', 58),
+(2, 'Sakura Montmartre', 'Japonaise', 'Paris', 32),
+(3, 'La Canopée', 'Végétarienne / bio', 'Lyon', 24),
+(4, 'Bouchon des Lumières', 'Cuisine lyonnaise traditionnelle', 'Lyon', 40),
+(5, 'Les Vagues du Port', 'Fruits de mer', 'Bordeaux', 45),
+(6, 'Casa del Vino', 'Italienne', 'Bordeaux', 28);
+
+Ecrire la requête SQL qui affiche uniquement les noms des restaurants localisés à Paris.
+
+SELECT Nom FROM restaurants
+WHERE Localisation = "Paris";
+
+Ecrire la requête SQL qui affiche la liste des types de cuisines, toutes villes confondues (sans les doublons).
+
+SELECT DISTINCT Type_cuisine FROM restaurants;
+
+Ecrire la requête SQL qui affiche la liste des restaurants dont le prix moyen est inférieur à 50€.
+
+SELECT * FROM restaurants
+WHERE Prix_moyen < 50;
+
+Ecrire la requête SQL qui affiche le nombre de restaurants à Paris.
+
+SELECT COUNT(*) FROM restaurants
+WHERE Localisation = "Paris";
+
+Ecrire la requête SQL qui affiche les noms des restaurants qui sont présents plusieurs fois
+
+SELECT Nom FROM restaurants
+GROUP BY Nom
+HAVING COUNT(*) >1;
+
+Ecrire la requête SQL qui affiche les restaurants par ordre alphabétique de nom.
+
+SELECT Nom FROM restaurants
+ORDER BY Nom ASC;
+
+Ecrire la requête SQL qui affiche le nombre de restaurants par ville.
+
+SELECT Localisation, COUNT(*) FROM restaurants
+GROUP by Localisation;
+
+Ecrire la requête SQL qui affiche tous les restaurant avec “le” dans leur nom.
+
+SELECT Nom FROM restaurants
+WHERE Nom LIKE "Le%";
+
+Ecrire la requête SQL qui affiche tous les restaurant moins chère que le premier restaurant.
+
+SELECT Nom FROM restaurants
+WHERE Prix_moyen < (SELECT Prix_moyen FROM restaurants
+                    WHERE Id = 1);
+
+Ecrire la requête SQL qui affiche le prix moyen le moins élevé.
+
+
+
+Ecrire la requête SQL qui affiche le prix moyen le plus élevé.
+
+Ecrire la requête SQL qui affiche la moyenne des prix moyens des restaurants parisiens.
+
+Ecrire la requête SQL qui affiche les restaurants moins chères que la moyenne des prix moyens parisiens.
+
+Tous les restaurants sont à -50%.
+Afficher le nom et le nouveau prix moyen des restaurants.
+

@@ -1,0 +1,12 @@
+<section>
+    <h3>NOS TARIFS</h3>
+    <div>
+        <?php foreach ($data["prices"] as $tarif){ ?>
+            <div>
+                <h4><?= $tarif["name"] ?></h4>
+                <h5><?= $tarif["price"] ?></h5>
+                <p><?= $tarif["duration"] ?></p>
+            </div>
+        <?php } ?>
+    </div>
+</section>

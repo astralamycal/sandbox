@@ -1,0 +1,25 @@
+Afficher les utilisateurs inscrits cette année, avec l’opérateur LIKE
+
+SELECT * FROM utilisateur
+WHERE inscription LIKE "2025%";
+
+Afficher tous les noms présents plus d’une fois dans la table Utilisateur
+
+SELECT nom FROM utilisateur
+GROUP BY nom
+HAVING COUNT(nom) >1;
+
+Afficher uniquement les prénoms et noms des homonymes
+
+SELECT nom, prenom FROM utilisateur
+GROUP BY nom, prenom
+HAVING COUNT(*) >1;
+
+Ajouter un nouvel utilisateur avec un email existant :
+Doe, Jonathan, john.doe@anonymous.com
+Afficher ensuite le nombre d’emails uniques.
+
+INSERT INTO utilisateur(nom, prenom, email, inscription)
+VALUES ("Doe", "Jonathan", "john.doe@anonymous.com", CURRENT_DATE);
+
+SELECT COUNT(DISTINCT email) FROM utilisateur;

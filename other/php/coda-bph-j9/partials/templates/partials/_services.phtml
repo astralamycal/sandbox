@@ -1,0 +1,13 @@
+<section>
+    <h3>NOS SERVICES</h3>
+    <div>
+        <?php foreach ($data["services"] as $service){ ?>
+            <div>
+                <img src="./assets/images/<?= $service["image"] ?>" alt="outline of a castle">
+                <h5><?= $service["name"] ?></h5>
+                <h4><?= $service["tagline"] ?></h4>
+                <p><?= $service["description"] ?></p>
+            </div>
+        <?php } ?>
+    </div>
+</section>

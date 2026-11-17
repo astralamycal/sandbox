@@ -1,0 +1,74 @@
+html{
+    font-family: grandstander;
+    background-image:linear-gradient(to right,#ffffff, #25004a);
+    font-size: 20px;
+}
+
+.title{
+    font-family: dynapuff;
+}
+
+h2{
+    text-align: center;
+    font-size: 24px;
+}
+
+p{
+    text-align: justify;
+    font-size: 20px;
+}
+
+
+.bloc{
+    border: solid;
+    border-color:rgb(193, 145, 234); /*find how to gradient*/
+    border-width: 5px;
+    border-radius: 30px;
+
+    background-color: #f3dffb;
+
+    margin-bottom: 20px;
+}
+
+/* nav section*/
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav_panel_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+}
+
+#student_status{
+    margin: 0px;
+    padding: 5px;
+}
+
+#nav_panel_right{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-basis: 500px;
+    flex-shrink: 1;
+}
+
+.link{
+    font-family: dynapuff;
+    font-size: 24px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}

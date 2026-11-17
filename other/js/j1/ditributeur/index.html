@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - jour 1</title>
+</head>
+
+<body>
+    <script>
+        const productList = [1, 1.5, 2, 1.2];
+
+        let money = Number(prompt("Please give the amount of money:"));
+
+        const userChoice = Number(prompt(`Please type the number assigned to the product wanted: (1 to 4)`));
+
+        if (userChoice >= 1 && userChoice <= 4) {
+            if (money >= productList[userChoice - 1]) {
+                money -= productList[userChoice - 1];
+                alert(`Product given aswell as leftover money (${money})`);
+            } else {
+                alert("ur poor m8");
+            }
+        } else {
+            alert("can you read please?");
+        }
+    </script>
+</body>
+
+</html>

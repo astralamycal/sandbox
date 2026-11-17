@@ -1,0 +1,26 @@
+html{
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+    background: linear-gradient(225deg, #7400b8, #6930c3, #5e60ce, #5390d9, #4ea8de, #48bfe3, #56cfe1);
+}
+
+body{
+    margin: 0px;
+    min-height: 100vh;
+}
+
+nav{
+    display: flex;
+    padding-left: 15%;
+    gap: 15%;
+    border-bottom: solid 2px #64dfdf;
+    height: 80px;
+    align-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}

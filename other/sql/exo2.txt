@@ -1,0 +1,198 @@
+Récupérer les noms, prénoms, email et date d’inscription des utilisateurs par ordre alphabétique de nom.
+Ne pas afficher la colonne ‘id’.
+
+SELECT nom, prenom, email, inscription FROM utilisateur
+ORDER BY nom ASC;
+
+Bezos
+Jeff
+jeff.bezos@amazon.com
+1994-07-05 02:00:00
+
+Doe
+John
+john.doe@anonymous.com
+2024-02-29 11:34:42
+
+Doe
+Jane
+jane.doe@anonymous.com
+2024-02-29 11:34:42
+
+Musk
+Elon
+elon.musk@gmail.com
+1995-01-01 01:00:00
+
+Musk
+Elon
+elon.musk@tesla.com
+2003-07-01 02:00:00
+
+Page
+Larry
+larry.page@gmail.com
+1998-09-04 02:00:00
+
+Torvalds
+Linus
+linus.torvalds@linux.com
+1991-10-05 02:00:00
+
+Récupérer le nombre de personnes dont le nom est ‘Doe’.
+
+SELECT nom, prenom, email, inscription FROM utilisateur
+ORDER BY nom ASC;
+
+2
+
+Récupérez le nombre d’homonymes pour chaque utilisateur, en affichant leur nom, prénom et nombre d’homonymes (en renommant cette colonne ‘homonymes’).
+Des homonymes sont des personnes portants le même nom et prénom.
+
+SELECT nom, prenom, COUNT(nom) AS "homonymes"
+FROM utilisateur
+GROUP BY nom, prenom;
+
+Bezos
+Jeff
+1
+
+Doe
+Jane
+1
+
+Doe
+John
+1
+
+Musk
+Elon
+2
+
+Page
+Larry
+1
+
+Torvalds
+Linus
+1
+
+Afficher les noms de famille, sans les doublons.
+
+SELECT DISTINCT nom FROM utilisateur;
+
+Torvalds
+
+Bezos
+
+Musk
+
+Page
+
+Doe
+
+Afficher les noms et prénoms, sans les homonymes.
+
+SELECT DISTINCT nom, prenom FROM utilisateur;
+
+Torvalds
+Linus
+
+Bezos
+Jeff
+
+Musk
+Elon
+
+Page
+Larry
+
+Doe
+John
+
+Doe
+Jane
+
+Afficher la liste des utilisateurs triés par date d’inscription, de la plus récente à la plus ancienne.
+
+SELECT * FROM utilisateur
+ORDER BY inscription DESC;
+
+6
+Doe
+John
+john.doe@anonymous.com
+2024-02-29 11:34:42
+
+7
+Doe
+Jane
+jane.doe@anonymous.com
+2024-02-29 11:34:42
+
+5
+Musk
+Elon
+elon.musk@tesla.com
+2003-07-01 02:00:00
+
+4
+Page
+Larry
+larry.page@gmail.com
+1998-09-04 02:00:00
+
+3
+Musk
+Elon
+elon.musk@gmail.com
+1995-01-01 01:00:00
+
+2
+Bezos
+Jeff
+jeff.bezos@amazon.com
+1994-07-05 02:00:00
+
+1
+Torvalds
+Linus
+linus.torvalds@linux.com
+1991-10-05 02:00:00
+
+Afficher le nombres de personnes inscrites aujourd’hui.
+
+SELECT COUNT(*) FROM utilisateur
+WHERE date(inscription) = CURRENT_DATE;
+
+None
+
+Afficher le nombre de personnes inscrites dans les années 90.
+
+SELECT COUNT(*) FROM utilisateur
+WHERE year(inscription) BETWEEN 1990 AND 1999;
+
+4
+
+Afficher le nombre d’inscriptions par jour.
+
+SELECT inscription, COUNT(inscription) FROM utilisateur
+GROUP BY inscription;
+
+1991-10-05 02:00:00
+1
+
+1994-07-05 02:00:00
+1
+
+1995-01-01 01:00:00
+1
+
+1998-09-04 02:00:00
+1
+
+2003-07-01 02:00:00
+1
+
+2024-02-29 11:34:42
+2

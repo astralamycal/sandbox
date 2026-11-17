@@ -1,0 +1,33 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    font-size: 5vw;
+}
+
+#title_text{
+    width: 300px;
+}
+
+#playlist_div{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: clamp(300px, 100vw, 500px);
+}
+
+li{
+    display: flex;
+    gap: 10px;
+    object-fit: contain;
+    height: 50px;
+    padding: 10px;
+
+    border-top: solid 3px #006466;
+}
+
+#img_yeplist{
+    width: 100px;
+}

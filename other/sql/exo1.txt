@@ -1,0 +1,105 @@
+Récupérez toute la table: SELECT * FROM 'utilisateur'
+1
+Torvalds
+Linus
+linus.torvalds@linux.com
+1991-10-05 02:00:00
+
+2
+Bezos
+Jeff
+jeff.bezos@amazon.com
+1994-07-05 02:00:00
+
+3
+Musk
+Elon
+elon.musk@gmail.com
+1995-01-01 01:00:00
+
+4
+Page
+Larry
+larry.page@gmail.com
+1998-09-04 02:00:00
+
+5
+Musk
+Elon
+elon.musk@tesla.com
+2003-07-01 02:00:00
+
+6
+Doe
+John
+john.doe@anonymous.com
+2024-02-29 11:34:42
+
+7
+Doe
+Jane
+jane.doe@anonymous.com
+2024-02-29 11:34:42
+
+Récupérez tous les champs ‘Nom’ et ‘Prénom’: SELECT nom, prenom FROM `utilisateur`;
+Torvalds
+Linus
+
+Bezos
+Jeff
+
+Musk
+Elon
+
+Page
+Larry
+
+Musk
+Elon
+
+Doe
+John
+
+Doe
+Jane
+
+Récupérez toutes personnes dont le nom est ‘Doe’: SELECT * FROM `utilisateur` WHERE name = "Doe";
+6
+Doe
+John
+john.doe@anonymous.com
+2024-02-29 11:34:42
+
+7
+Doe
+Jane
+jane.doe@anonymous.com
+2024-02-29 11:34:42
+
+Récupérez les dates d’inscriptions et emails des personnes inscrites aujourd’hui: SELECT * FROM `utilisateur` WHERE inscription = CURRENT_DATE;
+rien
+
+Récupérez la liste des utilisateurs inscrits dans les années 90: SELECT * FROM `utilisateur` WHERE year(inscription) BETWEEN 1990 AND 2000;
+1
+Torvalds
+Linus
+linus.torvalds@linux.com
+1991-10-05 02:00:00
+
+2
+Bezos
+Jeff
+jeff.bezos@amazon.com
+1994-07-05 02:00:00
+
+3
+Musk
+Elon
+elon.musk@gmail.com
+1995-01-01 01:00:00
+
+4
+Page
+Larry
+larry.page@gmail.com
+1998-09-04 02:00:00

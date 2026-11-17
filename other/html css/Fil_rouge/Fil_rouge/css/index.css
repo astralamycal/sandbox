@@ -1,0 +1,127 @@
+#main_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.star_duo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.star_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 350px;
+    flex-shrink: 1;
+}
+
+.star{
+    width: 100%;
+}
+
+.star_text{
+    margin: 0px;
+}
+
+#moon_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+}
+
+#moon_img{
+    width: 100%;
+    
+}
+
+#moon_text{
+    position: absolute;
+    
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 50px;
+}
+
+/* presentation part*/
+#presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backround_image{
+    
+    position: absolute;
+
+    width: 100%;
+}
+
+.about_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+#about_past{
+    background: url(../images/placeholder_forming_star.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about_present{
+    background: url(../images/placeholder_star_backround.png) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about_future{
+    background: url(../images/placeholder_old_star.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about_div_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 10px;
+
+    background: rgba(85, 26, 117, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    
+    width: 80%;
+    margin: 50px;
+}
+
+/*competence section*/
+#competence_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url(../images/placeholder_moon.png) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 20px;
+}

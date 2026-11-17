@@ -1,0 +1,46 @@
+exo1:
+
+SELECT * FROM users;
+
+SELECT * FROM users
+WHERE id=3;
+
+SELECT username from users
+WHERE id=2;
+
+SELECT username from users
+ORDER BY id DESC;
+
+SELECT username from users
+ORDER BY id DESC
+LIMIT 3;
+
+exo2:
+
+INSERT INTO users(username, email, job) VALUES ("Spiderman", "peter.parker@daily-bugle.com", 1);
+
+INSERT INTO jobs(name) VALUES ("Lycéen");
+
+exo3:
+
+SELECT email, jobs.name FROM users
+JOIN jobs ON jobs.id = users.job
+WHERE username = "Spiderman";
+
+SELECT * FROM users
+JOIN jobs ON jobs.id = users.job;
+
+SELECT email FROM users
+JOIN jobs ON jobs.id = users.job
+WHERE jobs.name = "Journaliste";
+
+exo4:
+
+UPDATE users
+SET job = 5
+WHERE username = "Spiderman";
+
+exo5:
+
+DELETE FROM users
+WHERE username = "Batman";

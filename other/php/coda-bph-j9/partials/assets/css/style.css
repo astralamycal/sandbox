@@ -1,0 +1,55 @@
+html{
+    font-family: "Montserrat";
+    color: white;
+    text-transform: uppercase;
+}
+
+body{
+    background: rgb(39, 38, 64);
+    margin: 0px;
+}
+
+p{
+    text-transform: lowercase;
+}
+
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex_row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav{
+    padding: 20px;
+}
+
+#header_logo{
+    width: 50px;
+}
+
+.navBar{
+    width: 60%;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#title{
+    background: linear-gradient(to bottom, rgba(27, 58, 75, 0.9), rgba(39, 38, 64, 0.9), rgba(77, 25, 77, 0.9)), url(../images/cemetery.jpeg) center center no-repeat;
+    background-size: cover;
+
+    gap: 20px;
+    padding: 30px;
+}
+
+h2{
+    font-weight: 500;
+}

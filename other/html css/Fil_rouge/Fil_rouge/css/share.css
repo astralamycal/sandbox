@@ -1,0 +1,19 @@
+html{
+    font-family: grandstander;
+    color: rgb(246, 228, 255);
+    background-image:linear-gradient(to top, #09030e, #1d1528);
+    font-size: 20px;
+}
+
+.title{
+    font-family: dynapuff;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+p{
+    text-align: justify;
+}

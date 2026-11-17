@@ -1,0 +1,45 @@
+{
+  "program_name": "2 en 2",
+  "instructions": [
+    {
+      "name": "add",
+      "register": "condition",
+      "value": 0
+    },
+    {
+      "name": "add",
+      "register": "cursor",
+      "value": 0
+    },
+    {
+      "name": "add",
+      "register": "storage",
+      "value": 1
+    },
+    {
+      "name": "write"
+    },
+    {
+      "name": "add",
+      "register": "condition",
+      "value": 1
+    },
+    {
+      "name": "add",
+      "register": "cursor",
+      "value": 2
+    },
+    {
+      "name": "zjump",
+      "instruction_number": "9",
+      "value": 5
+    },
+    {
+      "name": "jump",
+      "instruction_number": "4",
+    },
+    {
+      "name": "exit"
+    },
+  ]
+}

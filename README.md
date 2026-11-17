@@ -8,6 +8,10 @@
 
 ## 2025
 
+### Other
+
+A folder of older code snippets as part of school exercises
+
 ### Average dev journey
 
 A small choose your own adventure website.

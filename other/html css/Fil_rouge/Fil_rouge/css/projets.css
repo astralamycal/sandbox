@@ -1,0 +1,22 @@
+html{
+    font-family: grandstander;
+    background-image:linear-gradient(to bottom,#ffffff, #25004a);
+    font-size: 20px;
+}
+
+.about_div_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 10px;
+
+    background: rgba(85, 26, 117, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    
+    width: 80%;
+    margin: 50px;
+}

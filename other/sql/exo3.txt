@@ -1,0 +1,20 @@
+Lister les utilisateurs possédants une adresse gmail.
+
+SELECT * FROM utilisateur
+WHERE email LIKE "%@gmail.com";
+
+Afficher le nombre d’utilisateurs ayant une adresse gmail.
+
+SELECT COUNT(*) FROM utilisateur
+WHERE email LIKE "%@gmail.com";
+
+Insérer deux nouveaux utilisateurs :
+
+INSERT INTO utilisateur(nom, prenom, email, inscription)
+VALUES ("Gates", "Bill", "bill.gates@microsoft.com", "1975-04-04"),
+("Jobs", "Steve", "steve.jobsapple.com", "1976-04-01");
+
+Lister tous les utilisateurs ayant une syntaxe d’email invalide. Voilà la syntaxe d’un email valide : [varchar]@[varchar].[varchar]
+
+SELECT * FROM utilisateur
+WHERE email NOT LIKE "_%@_%._%";
