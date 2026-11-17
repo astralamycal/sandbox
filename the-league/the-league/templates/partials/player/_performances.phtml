@@ -1,0 +1,25 @@
+<section>
+
+    <h2>LES PERFORMANCES</h2>
+
+    <div>
+
+    <?php // La personne qui fait le css dispose comme elle veut !
+    // Voici un exemple de ligne du tableau performance : ?>
+
+    <?php $perfs = $player_perfManager->findPerfPlayer($data["id"]);?>
+
+    <?php foreach ($perfs as $perf) { ?>
+
+        <div>
+            <p><?=$perf["team_adverse"] ?></p>
+            <p><?=$perf["points"] ?></p>
+            <p><?=$perf["assists"] ?></p>
+            <p><?=$perf["victoire"] ?></p>
+        </div>
+
+    <?php } ?>
+    
+    </div>
+
+</section>

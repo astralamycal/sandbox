@@ -1,0 +1,20 @@
+<div class = "team">
+    <?php $teamName = $teamManager->findOne($data["id"])->getName(); ?>
+    
+    <h2><?= $teamName ?></h2>
+
+    <div class = "flex">
+
+        <?php $players = $playerManager->findAll();
+        foreach ($players as $player){
+            if ($player->getTeam()->getId() === $data["id"]){
+                $playerName = $player->getNickname();
+                $imageInfo = $player->getPortrait();?>
+
+                <?php require "templates/partials/_profil.phtml"; ?>
+            <?php } ?>
+        <?php } ?>
+
+    </div>
+
+</div>

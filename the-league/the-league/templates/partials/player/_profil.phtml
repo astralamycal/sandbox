@@ -1,0 +1,10 @@
+<div>
+
+    <?php $player = $playerManager->findOne($data["id"]); 
+    $imageInfo = $player->getPortrait();?>
+    
+    <h2><?= $player->getNickname() ?></h2>
+
+    <img src="<?= $imageInfo->getUrl() ?>" alt="<?= $imageInfo->getAlt() ?>">
+
+</div>

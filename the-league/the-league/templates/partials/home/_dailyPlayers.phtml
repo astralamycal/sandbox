@@ -1,0 +1,25 @@
+<section class="flex_column pink">
+
+    <h3 class="pink">LES PLAYERS À LA UNE</h3>
+
+    <div class="liste_joueur_une">
+
+        <?php $tab = [$playerManager->findOne(3), $playerManager->findOne(14), $playerManager->findOne(12)]; ?>
+
+        <?php foreach ($tab as $player) { ?>
+
+            <div class="flex_column joueur_une border">
+                
+                <img src="<?= $player->getPortrait()->getUrl()?>" alt="<?= $player->getPortrait()->getAlt()?>">
+                
+                <h4><?= $player->getNickname()?></h4>
+                
+                <h5 class="yellow"><?= $player->getTeam()->getName() ?></h5>
+
+            </div>
+        
+        <?php } ?>
+
+    </div>
+
+</section>

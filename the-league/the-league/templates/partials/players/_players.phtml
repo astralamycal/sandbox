@@ -1,0 +1,16 @@
+<div class = "team">
+
+    <h2>LES PLAYERS DE LA LEAGUE</h2>
+
+    <div class = "players-card">
+
+        <?php $players = $playerManager->findAll();
+        foreach ($players as $player){
+            $playerName = $player->getNickname();
+            $imageInfo = $player->getPortrait();?>
+            <?php require "templates/partials/_profilDescript.phtml"; ?>
+        <?php } ?>
+
+    </div>
+
+</div>

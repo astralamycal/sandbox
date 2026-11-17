@@ -1,0 +1,13 @@
+<div class="image_vs">
+
+<?php $game = $gameManager->findOne($data["id"]); ?>
+
+    <div>
+        <img src=<?= $game->getTeam1()->getLogo()->getUrl()?> alt="<?= $game->getTeam1()->getLogo()->getAlt()?>">
+    </div>
+    
+    <div>
+        <img src=<?= $game->getTeam2()->getLogo()->getUrl()?> alt="<?= $game->getTeam2()->getLogo()->getAlt()?>">
+    </div>
+
+</div>

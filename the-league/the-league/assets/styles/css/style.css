@@ -1,0 +1,62 @@
+/* for all pages*/
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0b132b;
+    color: white;
+}
+ 
+body{
+    margin: 0px;
+}
+
+h3{
+  font-family: Ubuntu;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.yellow{
+  color: #d4b52f;
+}
+
+.pink{
+  color: #d97ab5;
+}
+
+.blue{
+  color: #45a0ec;
+}
+
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.link_button{
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+.border {
+  border: solid 1px #1c2541;
+}

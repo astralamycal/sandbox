@@ -1,0 +1,11 @@
+<section class="matchs_section">
+
+    <h2>Les Matchs</h2>
+
+    <?php for ($i = 1; $i < 4; $i++) { ?>
+        <?php $id_game = $i; ?>
+        <?php require "templates/partials/_match.phtml"; ?>
+        <a href="index.php?route=match&id=<?= $id_game ?>">DÉTAIL DU MATCH</a>
+    <?php } ?>
+
+</section>

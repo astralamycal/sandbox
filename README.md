@@ -8,6 +8,10 @@
 
 ## 2025
 
+### The League
+
+Creation of a website based on a pre-made layout as a group project.
+
 ### Other
 
 A folder of older code snippets as part of school exercises

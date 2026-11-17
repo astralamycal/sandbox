@@ -1,0 +1,28 @@
+<div class = "teams">
+
+    <h2>LES TEAMS DE LA LEAGUE</h2>
+
+    <div class = "teams-card">
+
+        <?php $data = $teamManager->findAll();
+        foreach ($data as $team){
+            $teamName = $team->getName();
+            $imageInfo = $team->getLogo();?>
+        <div class = "team-card">
+            <img src="<?= $imageInfo->getUrl() ?>" alt="<?= $imageInfo->getAlt() ?>">
+            <h3><?= $teamName ?></h3>
+
+            <p><?php if ($teamName === "Sparrow"){
+                echo "The spies from the east";
+            }else if ($teamName === "Vendetta"){
+                echo "A knack for revenge";
+            }else{
+                echo "A team of " . $teamName;}?></p>
+                
+            <a href="index.php?route=team&id=<?= $team->getId() ?>">Découvrez <?= $teamName ?></a>
+        </div>
+        <?php } ?>
+
+    </div>
+
+</div>
